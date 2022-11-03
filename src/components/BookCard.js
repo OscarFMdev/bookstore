@@ -7,9 +7,11 @@ const BookCard = () => (
       <h2 className="book-title">The Hunger Games</h2>
       <blockquote className="book-author">Suzanne Collins</blockquote>
       <div className="options d-flex">
-        <p>Comments</p>
-        <p>Remove</p>
-        <p>Edit</p>
+        <p className="option">Comments</p>
+        <div className="line" />
+        <p className="option">Remove</p>
+        <div className="line" />
+        <p className="option">Edit</p>
       </div>
     </div>
   </div>
