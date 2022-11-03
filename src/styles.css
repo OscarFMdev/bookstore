@@ -1,8 +1,79 @@
 :root {
   --blue: #0290ff;
   --grayBg: #f5f6fa;
+  --whiteCard: #fafafa;
+}
+
+/* Globals */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   background-color: var(--grayBg);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utilities */
+.flex-column {
+  flex-direction: column;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NavBar */
+
+.top-section,
+nav {
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 50px;
+}
+
+* {
+  color: black;
+}
+
+.logo {
+  color: var(--blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.logo:visited {
+  color: var(--blue);
+}
+
+nav > * {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
 }
