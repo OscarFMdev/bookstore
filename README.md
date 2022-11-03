@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Bookstore
+Bookstore is a MVP (Minimum Viable Product) this App allows you to:
+- Display books.
+- Add a book.
+- Remove selected book.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Built With
 
-### `npm start`
+- React (CRA)
+- JSX
+- CSS
+- [Zeplin](https://zeplin.io/) 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Not yet available, you can check another project [here](https://oscarfmdev-calculator.netlify.app/)
 
-### `npm test`
+## Getting Started
+To get a local copy up and running follow these simple example steps. (NPM)
+1. Open your terminal
+2. Navigate to the directory where you want your project cloned
+3. Clone the project using `git clone` or just copy the command below:
+```  
+   git clone https://github.com/OscarFMdev/mathMagicians.git
+```   
+4. Open the project with your IDE like [Visual Studio Code](https://code.visualstudio.com/download)
+5. Run `npm install` to get the dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+6. Run webpack:
+- Production:
+   ``` 
+      npm run build
+   ```  
+- Development:
+  ```
+   npm run start
+  ```
+  not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
-### `npm run build`
+### Prerequisites
+- Having an IDE .
+- Having Git installed and configured.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup
+- Clone the repository
+- Open the folder with your IDE
+- Get the dependencies with `npm install` 
+  - not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Authors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👤 **Oscar Fernández Muñoz**
 
-### `npm run eject`
+- GitHub: [@OscarFMdev](https://github.com/OscarFMdev)
+- Twitter: [@OscarFMdev](https://twitter.com/OscarFMdev)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/OscarFMdev)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+👤 **Javivy**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- GitHub: [@Javivy](https://github.com/Javivy)
+- LinkedIn: [Javier Vargas](https://www.linkedin.com/in/javier-alejandro-vargas-ortega)
+- Twitter [@Javivy_2803](https://twitter.com/Javivy_2803)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🤝 Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contributions, issues, and feature requests are welcome!
 
-## Learn More
+Feel free to check the [issues page](../../issues/).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Show your support
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Give a ⭐️ if you like this project!
 
-### Code Splitting
+<!-- ## Acknowledgments -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is [MIT](./MIT.md) licensed.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
