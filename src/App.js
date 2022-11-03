@@ -7,11 +7,13 @@ import NavBar from './components/NavBar';
 
 const App = () => (
   <>
-    <NavBar />
-    <Routes>
-      <Route path="/" element={<Books />} />
-      <Route path="Categories" element={<Categories />} />
-    </Routes>
+    <main className="d-flex">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="Categories" element={<Categories />} />
+      </Routes>
+    </main>
   </>
 );
 
