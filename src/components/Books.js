@@ -1,7 +1,8 @@
 import React from 'react';
+import BookCard from './BookCard';
 
 const Books = () => (
-  <div>Books</div>
+  <BookCard />
 );
 
 export default Books;
