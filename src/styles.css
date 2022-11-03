@@ -15,12 +15,26 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   background-color: var(--grayBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
+}
+
+main {
+  width: 87.5rem;
+  height: 68.563rem;
+  margin: 0 2.5rem 4.063rem 0;
+  padding: 0 0 49.625rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;
+  flex-direction: column;
 }
 
 /* Utilities */
@@ -39,6 +53,13 @@ a {
 }
 
 /* NavBar */
+.top-section {
+  width: 87.5rem;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #fff;
+}
 
 .top-section,
 nav {
@@ -76,4 +97,8 @@ nav > * {
   line-height: normal;
   letter-spacing: 1.9px;
   color: var(--black-two);
+}
+
+.active {
+  opacity: 1;
 }
