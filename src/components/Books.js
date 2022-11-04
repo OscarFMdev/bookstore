@@ -1,4 +1,5 @@
 import React from 'react';
+import AddNewBook from './AddNewBook';
 import BookCard from './BookCard';
 
 const Books = () => (
@@ -36,6 +37,10 @@ const Books = () => (
         }
       }
     />
+
+    <div className="horizontal-line" />
+
+    <AddNewBook />
   </>
 );
 
