@@ -276,7 +276,7 @@ form {
 }
 
 .title-input,
-.category-input,
+.author-input,
 .add-button {
   border-style: none;
   height: 40px;
@@ -286,7 +286,7 @@ form {
   width: 50%;
 }
 
-.category-input {
+.author-input {
   background-color: white;
   width: 20%;
 }
