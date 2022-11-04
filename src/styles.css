@@ -121,9 +121,14 @@ nav > * {
   border: solid 1px #e8e8e8;
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  padding: 2rem 0 1.625rem 1.688rem;
   width: 75rem;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.left-part,
+.right-part {
+  width: 32%;
 }
 
 .category {
@@ -135,9 +140,8 @@ nav > * {
   height: 1.125rem;
   letter-spacing: normal;
   line-height: normal;
-  margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  width: 3.063rem;
+  width: 10.063rem;
 }
 
 .book-title {
@@ -150,8 +154,6 @@ nav > * {
   height: 1.813rem;
   letter-spacing: -0.2px;
   line-height: normal;
-  margin: 0.188rem 20.188rem 0 0;
-  width: 12.313rem;
 }
 
 .book-author {
@@ -202,6 +204,8 @@ nav > * {
 
 .center-part {
   align-items: center;
+  justify-content: center;
+  margin-left: 200px;
 }
 
 .center-part .data {
@@ -236,4 +240,5 @@ nav > * {
   border-style: none;
   padding: 5px 25px;
   margin-top: 15px;
+  width: 165px;
 }
