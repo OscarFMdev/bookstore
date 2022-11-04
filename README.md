@@ -61,12 +61,6 @@ To get a local copy up and running follow these simple example steps. (NPM)
 - Twitter: [@OscarFMdev](https://twitter.com/OscarFMdev)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/OscarFMdev)
 
-👤 **Javivy**
-
-- GitHub: [@Javivy](https://github.com/Javivy)
-- LinkedIn: [Javier Vargas](https://www.linkedin.com/in/javier-alejandro-vargas-ortega)
-- Twitter [@Javivy_2803](https://twitter.com/Javivy_2803)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
