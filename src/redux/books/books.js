@@ -10,7 +10,9 @@ export const removeBook = (payload) => ({
   payload,
 });
 
-const booksReducer = (state = [{ id: '1', title: 'The psychoanalyst', author: 'John Katzenbach' }], action) => {
+const booksReducer = (state = [{
+  id: '1', title: 'The psychoanalyst', author: 'John Katzenbach', category: 'Thriller',
+}], action) => {
   switch (action.type) {
     case Types.ADD_BOOK:
       return [...state, action.payload];

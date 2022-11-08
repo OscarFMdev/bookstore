@@ -10,6 +10,7 @@ const categoriesReducer = (state = [], action) => {
     case Types.CHECK_STATUS:
       return [
         ...state,
+        action.payload,
       ];
     default:
       return state;
