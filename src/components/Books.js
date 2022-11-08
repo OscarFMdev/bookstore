@@ -4,8 +4,7 @@ import AddNewBook from './AddNewBook';
 import BookCard from './BookCard';
 
 const Books = () => {
-  const books = useSelector((store) => store.bookReducer);
-
+  const books = useSelector((store) => store.books);
   return (
     <>
       {

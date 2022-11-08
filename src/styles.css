@@ -177,6 +177,7 @@ nav > * {
 
 .options {
   align-items: center;
+  margin-top: 20px;
 }
 
 .option,
@@ -280,18 +281,17 @@ form {
 
 .title-input,
 .author-input,
-.add-button {
+.add-button,
+select {
   border-style: none;
   height: 40px;
-}
-
-.title-input {
-  width: 50%;
-}
-
-.author-input {
   background-color: white;
-  width: 20%;
+}
+
+.title-input,
+.author-input,
+select {
+  width: 33%;
 }
 
 .add-button {

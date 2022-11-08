@@ -4,13 +4,13 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const BookCard = ({
-  id, title, author,
+  id, title, author, category,
 }) => {
   const dispatch = useDispatch();
   return (
     <div className="book-card d-flex">
       <div className="left-part flex-column">
-        <p className="category">action</p>
+        <p className="category">{category}</p>
         <h2 className="book-title">{title}</h2>
         <blockquote className="book-author">{author}</blockquote>
         <div className="options d-flex">
@@ -44,6 +44,7 @@ BookCard.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default BookCard;
