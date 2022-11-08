@@ -26,8 +26,8 @@ const AddNewBook = () => {
     <section className="add-section">
       <h3>Add New Book</h3>
       <form className="d-flex">
-        <input className="title-input" onChange={getTitle} type="text" placeholder="Book title" required />
-        <input className="author-input" onChange={getAuthor} type="text" placeholder="Author" required />
+        <input className="title-input" onChange={getTitle} type="text" placeholder="Book title" value={title} required />
+        <input className="author-input" onChange={getAuthor} type="text" placeholder="Author" value={author} required />
         <button
           className="add-button"
           type="submit"
