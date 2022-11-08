@@ -31,7 +31,8 @@ const AddNewBook = () => {
         <button
           className="add-button"
           type="submit"
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             addToStore(title, author);
           }}
         >
