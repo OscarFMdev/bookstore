@@ -29,10 +29,10 @@ const AddNewBook = () => {
     <section className="add-section">
       <h3>Add New Book</h3>
       <form className="d-flex">
-        <input className="title-input" onChange={getTitle} type="text" placeholder="Book title" value={title} required />
-        <input className="author-input" onChange={getAuthor} type="text" placeholder="Author" value={author} required />
-        <select onChange={getCategory} required>
-          <option value="Unkown" hidden>Genre</option>
+        <input name="title" className="title-input" onChange={getTitle} type="text" placeholder="Book title" value={title} required />
+        <input name="author" className="author-input" onChange={getAuthor} type="text" placeholder="Author" value={author} required />
+        <select name="genre" onChange={getCategory} required>
+          <option value="" hidden>Genre</option>
           <option value="Action">Action</option>
           <option value="Programming">Programming</option>
           <option value="Economy">Economy</option>
