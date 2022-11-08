@@ -1,11 +1,11 @@
 import Types from '../widgets/widgets';
 
-export const addAction = (payload) => ({
+export const addBook = (payload) => ({
   type: Types.ADD_BOOK,
   payload,
 });
 
-export const removeAction = (payload) => ({
+export const removeBook = (payload) => ({
   type: Types.REMOVE_BOOK,
   payload,
 });

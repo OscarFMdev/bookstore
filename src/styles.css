@@ -179,7 +179,8 @@ nav > * {
   align-items: center;
 }
 
-.option {
+.option,
+.delete {
   color: #4386bf;
   font-family: var(--robotoSlab);
   font-size: 0.875rem;
@@ -191,6 +192,8 @@ nav > * {
   line-height: normal;
   margin: 0.188rem 0.938rem 0.125rem 0;
   width: 4.563rem;
+  background-color: white;
+  border-style: none;
 }
 
 .line {
