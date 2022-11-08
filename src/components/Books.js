@@ -17,8 +17,6 @@ const Books = () => {
               title={book.title}
               category={book.category}
               author={book.author}
-              percentage="64"
-              chapter="Chapter 1"
             />
           ),
         )

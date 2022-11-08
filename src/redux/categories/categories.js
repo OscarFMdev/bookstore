@@ -1,14 +1,16 @@
 import Types from '../widgets/widgets';
 
+export const checkStatus = (payload) => ({
+  type: Types.CHECK_STATUS,
+  payload,
+});
+
 const categoriesReducer = (state = [], action) => {
   switch (action.type) {
-    case Types.ADD_BOOK:
+    case Types.CHECK_STATUS:
       return [
         ...state,
-        action.payload,
       ];
-    case Types.REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
     default:
       return state;
   }
