@@ -7,7 +7,7 @@ import BookCard from './BookCard';
 const Books = () => {
   const books = useSelector((store) => store.books);
   const dispatch = useDispatch();
-  useEffect(() => { dispatch(getBooks); }, []);
+  useEffect(() => { dispatch(getBooks); }, [dispatch]);
   return (
     <>
       {

@@ -1,42 +1,61 @@
-import { addBookAPI, deleteBookAPI, fetchBooksAPI } from '../../API/bookstoreAPI';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import Types from '../widgets/widgets';
 
 const initialState = [];
 
-const dataToArr = (data) => {
-  const array = [];
-  Object.keys(data).map((key) => {
-    const book = data[key][0];
-    book.item_id = key;
-    return array.push(book);
-  });
-  return array;
-};
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/tAB8SosTtsDw2NxkYEWP/books/';
 
-export const getBooks = async (dispatch) => {
-  const data = await fetchBooksAPI();
-  const dataArr = dataToArr(data);
-  dispatch({ type: Types.GET_BOOKS, payload: dataArr });
-};
+export const addBook = createAsyncThunk(Types.ADD_BOOK, async (obj) => {
+  await fetch(url,
+    {
+      method: 'POST',
+      headers: {
+        'content-Type': 'application/json',
+      },
+      body: JSON.stringify(obj),
+    });
+  return obj;
+});
 
-export const addBook = (payload) => async (dispatch) => {
-  await addBookAPI(payload);
-  dispatch({ type: Types.ADD_BOOK, payload });
-};
+export const getBooks = createAsyncThunk(Types.GET_BOOKS, async () => {
+  const response = await fetch(url,
+    {
+      method: 'GET',
+      headers: {
+        'content-Type': 'application/json',
+      },
+    });
+  const result = await response.json();
+  return result;
+});
 
-export const removeBook = (payload) => async (dispatch) => {
-  await deleteBookAPI(payload);
-  dispatch({ type: Types.REMOVE_BOOK, payload });
-};
+export const removeBook = createAsyncThunk(Types.REMOVE_BOOK, async (id) => {
+  const urlId = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/tAB8SosTtsDw2NxkYEWP/books/${id}`;
+  await fetch(urlId,
+    {
+      method: 'DELETE',
+      headers: {
+        'content-Type': 'application/json',
+      },
+      body: JSON.stringify({ item_id: id }),
+    });
+  return id;
+});
 
 const booksReducer = (state = initialState, action) => {
+  const list = [];
   switch (action.type) {
-    case Types.ADD_BOOK:
+    case `${Types.GET_BOOKS}/fulfilled`:
+      Object.keys(action.payload).forEach((element) => {
+        const book = action.payload[element][0];
+        book.item_id = element;
+        list.push(book);
+      });
+      return list;
+    case `${Types.ADD_BOOK}/fulfilled`:
       return [...state, action.payload];
-    case Types.REMOVE_BOOK:
-      return state.filter((book) => book.item_id !== action.payload);
-    case Types.GET_BOOKS:
-      return action.payload;
+    case `${Types.REMOVE_BOOK}/fulfilled`:
+      return state.filter((item) => item.item_id !== action.payload);
     default:
       return state;
   }
