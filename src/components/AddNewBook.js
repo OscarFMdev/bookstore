@@ -15,6 +15,7 @@ const AddNewBook = () => {
 
   const addToStore = (title, author) => {
     const book = {
+      item_id: uuid(),
       id: uuid(),
       title,
       author,
