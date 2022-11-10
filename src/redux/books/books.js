@@ -1,23 +1,42 @@
+import { addBookAPI, deleteBookAPI, fetchBooksAPI } from '../../API/bookstoreAPI';
 import Types from '../widgets/widgets';
 
-export const addBook = (payload) => ({
-  type: Types.ADD_BOOK,
-  payload,
-});
+const initialState = [];
 
-export const removeBook = (payload) => ({
-  type: Types.REMOVE_BOOK,
-  payload,
-});
+const dataToArr = (data) => {
+  const array = [];
+  Object.keys(data).map((key) => {
+    const book = data[key][0];
+    book.item_id = key;
+    return array.push(book);
+  });
+  return array;
+};
 
-const booksReducer = (state = [{
-  id: '1', title: 'The psychoanalyst', author: 'John Katzenbach', category: 'Thriller',
-}], action) => {
+export const getBooks = async (dispatch) => {
+  const data = await fetchBooksAPI();
+  const dataArr = dataToArr(data);
+  dispatch({ type: Types.GET_BOOKS, payload: dataArr });
+};
+
+export const addBook = (payload) => async (dispatch) => {
+  await addBookAPI(payload);
+  dispatch({ type: Types.ADD_BOOK, payload });
+};
+
+export const removeBook = (payload) => async (dispatch) => {
+  await deleteBookAPI(payload);
+  dispatch({ type: Types.REMOVE_BOOK, payload });
+};
+
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case Types.ADD_BOOK:
       return [...state, action.payload];
     case Types.REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((book) => book.item_id !== action.payload);
+    case Types.GET_BOOKS:
+      return action.payload;
     default:
       return state;
   }
