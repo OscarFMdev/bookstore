@@ -5,6 +5,11 @@ Bookstore is a MVP (Minimum Viable Product) this App allows you to:
 - Display books.
 - Add a book.
 - Remove selected book.
+The goals of this project are:
+- Apply the concept of state management.
+- Use store, actions and reducers in React.
+- Connect React and Redux.
+- Connect an existing API via Redux and use the data to display something in a UI.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

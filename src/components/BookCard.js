@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const BookCard = ({
-  id, title, author, category,
+  itemId, title, author, category,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -16,7 +16,16 @@ const BookCard = ({
         <div className="options d-flex">
           <p className="option">Comments</p>
           <div className="line" />
-          <button type="button" className="delete" onClick={() => dispatch(removeBook(id))}>Remove</button>
+          <button
+            type="button"
+            className="delete"
+            onClick={() => {
+              dispatch(removeBook(itemId));
+            }}
+          >
+            Remove
+
+          </button>
           <div className="line" />
           <p className="option">Edit</p>
         </div>
@@ -41,7 +50,7 @@ const BookCard = ({
 };
 
 BookCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
