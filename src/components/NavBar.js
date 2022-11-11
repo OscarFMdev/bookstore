@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
+const img = require('../assets/user.png');
+
 const NavBar = () => (
   <header className="top-section d-flex">
     <h1>
@@ -15,6 +17,7 @@ const NavBar = () => (
         Categories
       </NavLink>
     </nav>
+    <img src={img} alt="user" />
   </header>
 );
 
