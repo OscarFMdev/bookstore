@@ -23,6 +23,7 @@ const Books = () => {
           ),
         )
       }
+      <div className="horizontal-line" />
       <AddNewBook />
     </>
   );

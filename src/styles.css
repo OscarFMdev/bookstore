@@ -89,6 +89,7 @@ nav {
   align-items: center;
   column-gap: 50px;
   justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .logo {
@@ -118,6 +119,11 @@ nav > * {
 
 .active {
   opacity: 1;
+}
+
+img {
+  height: 3rem;
+  width: 3rem;
 }
 
 /* BookCard */
