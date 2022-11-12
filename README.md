@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Built With
 
-- React (CRA)
+- React with [Create React App](https://github.com/facebook/create-react-app)
 - JSX
 - CSS
 - [Zeplin](https://zeplin.io/) 
